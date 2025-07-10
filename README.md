@@ -44,18 +44,30 @@ This version of `ft_printf` supports the following format specifiers:
 
 To use this `ft_printf` implementation in your own C project:
 
-1.  **Add the files**: Copy all the `.c` source files and the `ft_printf.h` header file into your project directory.
-
-2.  **Include the header**: In the file where you want to use `ft_printf`, include the header:
-    ```c
-    #include "ft_printf.h"
+1.  **Clone the repository and compile the library**: First, clone this repository to your local machine and run `make` to compile the source files into a static library archive called `libftprintf.a`.
+    ```bash
+    git clone https://github.com/murdex5/ft_printf.git
+    cd ft_printf
+    make
     ```
 
-3.  **Compile**: Compile your project, including all the provided `.c` files. If you are using a `Makefile`, add the source files to your `SRCS` variable. For example:
-    ```makefile
-    SRCS = your_main.c ft_printf.c printf_utils.c utils0.c utils1.c utils2.c utils3.c utils4.c
+2.  **Include the library in your project**:
+    *   Copy the `libftprintf.a` file and the `ft_printf.h` header file into your project's directory.
+    *   In the C file where you want to use `ft_printf`, include the header:
+        ```c
+        #include "ft_printf.h"
+        ```
+
+3.  **Compile your project**: When compiling your project, you need to tell the compiler to link against the `ft_printf` library.
+    
+    For example, if you have a `main.c` file, you would compile it like this:
+    ```bash
+    gcc main.c -L. -lftprintf -o your_program_name
     ```
-    Then, run `make`.
+    *   `main.c` is your source file.
+    *   `-L.` tells the linker to look for libraries in the current directory.
+    *   `-lftprintf` tells the linker to link the `ft_printf` library. Note that `lib` and `.a` are omitted.
+    *   `-o your_program_name` specifies the name of the output executable.
 
 ## 💡 Example
 
