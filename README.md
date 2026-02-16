@@ -104,6 +104,11 @@ Hex (uppercase): DEADBEEF
 Printing a single char: A
 Don't forget the percent sign: %
 ```
+## 🤝 Contributing
+
+Feedback and suggestions are welcome! Feel free to:
+- Report bugs by opening an issue
+- Suggest improvements
 
 ## ✍️ Author
 
